@@ -33,9 +33,6 @@ def DoIRemoveThisGrid(objnode, mode):
 				#Ok, it's a reactor.
 				hasreactor = True
 
-				#Is it enabled and has power?
-				fuel = False
-
 				#Loop through Inventory
 				inventory = block.find('Inventory').find('Items')
 

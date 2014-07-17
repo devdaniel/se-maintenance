@@ -8,22 +8,6 @@ This script is to load a SpaceEngineers save and perform maintenance & cleanup t
  - Restore asteroids that no one is near (in progress)
 
 It requires a fair chunk of RAM at times because it has to load & parse the large SE save file. Some of those get up to 100MB.
-
-v1.1 15/07/2014
- - Added Junk mode, removing everything without a reaction, regardless of fuel or status.
- - Considered pruning factions without a leader but you might get into strife over factions getting along without a leader,
-	 suddenly having base turrets turn on friendlies. Won't do that.
- - Added function to remove all free-floating objects. Doesn't do corpses though, they are more complicated
- - Added whatif mode, like Powershell, doesn't make any changes but tells you what it'll do. Good for debugging
- - Added function to remove junk players, players that don't own anything. Also removes them from factions.
-	Considered using players with the <IsDead> attribute True, but that would screw up ownership. 
-	Might consider another mode that removes "dead" players and sets ownership of their stuff to "nobody".
-
-v1.1.1 16/07/2014
- - Fixed up Player pruning. Removes player from the FactionPlayer and FactionRequests tables
- - Fixed up Faction pruning. Stopped removing factions who's members don't own anything, will only clear away empty factions now. The player pruner should make this more viable
-	Also removes factions from FactionRelations & FactionRequests
-
 """
 
 import xml.etree.ElementTree as ET #Used to read the SE save files

@@ -63,9 +63,11 @@ This is my first major release of anything, feel free to tell me where I've gone
 The ultimate goal of this utility is to become obsolete with its functions being done by Space Engineers itself. Until then, this is way to do it.
 
 ## Version History
-**V 1.0**
 
-- Release
+**V 1.1.1**
+
+- Fixed up Player pruning. Removes player from the FactionPlayer and FactionRequests tables
+- Fixed up Faction pruning. Stopped removing factions who's members don't own anything, will only clear away empty factions now. The player pruner should make this more viable. Also removes factions from FactionRelations & FactionRequests tables
 
 **V 1.1**
 
@@ -75,9 +77,8 @@ The ultimate goal of this utility is to become obsolete with its functions being
 - Added whatif mode, like MS Powershell, doesn't make any changes but tells you what it'll do. Good for debugging
 - Added function to remove junk players, players that don't own anything. Also removes them from factions
 
-**V 1.1.1**
+**V 1.0**
 
-- Fixed up Player pruning. Removes player from the FactionPlayer and FactionRequests tables
-- Fixed up Faction pruning. Stopped removing factions who's members don't own anything, will only clear away empty factions now. The player pruner should make this more viable. Also removes factions from FactionRelations & FactionRequests tables
+- Release
 
 [Author's Forum Thread](http://forums.keenswh.com/post/se-server-maintenance-utility-6985610)
